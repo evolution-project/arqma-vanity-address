@@ -11,3 +11,6 @@ Arqma Vanity Address Generator
 Binary file will be built: ```arqma-vanity-address```  
 
 options can be invoked: ```./arqma-vanity-address --help```
+
+
+Credits to: https://github.com/pwhelan/sumo-vanity-address/
