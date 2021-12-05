@@ -1,5 +1,7 @@
-# evox-vanity-address
+# EVOX-Vanity-Address
 Evolution Vanity Address Generator
+
+
 
 # Requirements:
 
@@ -20,4 +22,6 @@ Generated address will look like this: ```evartfix```
 Options can be invoked: ```./evox-vanity-address --help```
 
 
-Credits to: https://github.com/pwhelan/sumo-vanity-address/
+
+
+Credits to: https://github.com/malbit/arqma-vanity-address/
