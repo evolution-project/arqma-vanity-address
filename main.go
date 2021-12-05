@@ -46,7 +46,7 @@ func worker(k chan *keyPair, s chan struct{}, numeral int, vanity string) {
 	for {
 		spend := newKeyPair()
 		pbuf := spend.Pub.ToBytes()
-		scratch := append(genutils.Uint64ToBytes(0x2cca), pbuf[:]...)
+		scratch := append(genutils.Uint64ToBytes(0x6362), pbuf[:]...)
 		slug := genutils.EncodeMoneroBase58(scratch[:])
 
 		if slug[3:3+len(vanity)] == vanity && (numeral == 0 || slug[3:3+1] == nc) {
@@ -62,7 +62,7 @@ func worker(k chan *keyPair, s chan struct{}, numeral int, vanity string) {
 }
 
 func (w *wallet) Address() string {
-	prefix := genutils.Uint64ToBytes(0x2cca)
+	prefix := genutils.Uint64ToBytes(0x6362)
 	csum := genutils.GetChecksum(prefix, w.SpendKey.Pub[:], w.ViewKey.Pub[:])
 	return genutils.EncodeMoneroBase58(prefix, w.SpendKey.Pub[:],
 		w.ViewKey.Pub[:], csum[:4])
