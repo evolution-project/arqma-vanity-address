@@ -1,4 +1,4 @@
-module github.com/malbit/arqma-vanity-address
+module github.com/evolution-project/evox-vanity-address
 
 require (
 	github.com/ebfe/keccak v0.0.0-20150115210727-5cc570678d1b
