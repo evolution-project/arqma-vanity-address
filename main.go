@@ -128,10 +128,11 @@ func main() {
 	numeral := 0
 
 	flag.IntVar(&threads, "threads", runtime.GOMAXPROCS(0),
-		"set the number of threads to use")
+		"Set the number of threads to use")
 	flag.IntVar(&cores, "cores", 0,
-		"set the number of cores the machine has (not usually required)")
-	flag.IntVar(&numeral, "numeral", 0, "set the leading numeral in the address")
+		"Set the number of cores the machine has (not usually required)")
+	flag.IntVar(&numeral, "numeral", 0, 
+		"Set the leading numeral in the address")
 	flag.Parse()
 
 	if numeral >= 7 || numeral < 0 {
@@ -151,9 +152,9 @@ func main() {
 
 	fmt.Printf("[*] Threads: %d Cores: %d\n", threads, runtime.GOMAXPROCS(0))
 	if numeral == 0 {
-		fmt.Printf("[*] Searching for Arqma address starting with ar#%s\n", flag.Arg(0))
+		fmt.Printf("[*] Searching for EVOX address starting with ev#%s\n", flag.Arg(0))
 	} else {
-		fmt.Printf("[*] Searching for Arqma address starting with ar%d%s\n", numeral, flag.Arg(0))
+		fmt.Printf("[*] Searching for EVOX address starting with ev%d%s\n", numeral, flag.Arg(0))
 	}
 
 	s := make(chan struct{})
